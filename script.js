@@ -18,39 +18,39 @@ formu.addEventListener("submit", e => {
   e.preventDefault();
   console.log(color.value);
   console.log(type.value);
-  if((color.value == "")&&(type.value == "")){
+  if ((color.value == "") && (type.value == "")) {
     var name = n.value;
     console.log(name);
-      fetch("https://digimoncard.io/api-public/search.php?n=" + name, requestOptions)
-        .then(response => response.json())
-        .then(result => {
-          console.log(result);
-          pintarCard(result);
-        })
-        .catch(error => console.log('error', error));
-  } else if((color.value == "")&&(type.value != "")){
+    fetch("https://digimoncard.io/api-public/search.php?n=" + name, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        pintarCard(result);
+      })
+      .catch(error => console.log('error', error));
+  } else if ((color.value == "") && (type.value != "")) {
     var name = n.value;
     console.log(name);
-      fetch("https://digimoncard.io/api-public/search.php?n=" + name + "&type=" + type.value, requestOptions)
-        .then(response => response.json())
-        .then(result => {
-          console.log(result);
-          pintarCard(result);
-        })
-        .catch(error => console.log('error', error));
-  } else if((color.value != "")&&(type.value == "")){
+    fetch("https://digimoncard.io/api-public/search.php?n=" + name + "&type=" + type.value, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        pintarCard(result);
+      })
+      .catch(error => console.log('error', error));
+  } else if ((color.value != "") && (type.value == "")) {
     var name = n.value;
     console.log(name);
-      fetch("https://digimoncard.io/api-public/search.php?n=" + name + "&color=" + color.value, requestOptions)
-        .then(response => response.json())
-        .then(result => {
-          console.log(result);
-          pintarCard(result);
-        })
-        .catch(error => console.log('error', error));
-  }
-  var name = n.value;
-  console.log(name);
+    fetch("https://digimoncard.io/api-public/search.php?n=" + name + "&color=" + color.value, requestOptions)
+      .then(response => response.json())
+      .then(result => {
+        console.log(result);
+        pintarCard(result);
+      })
+      .catch(error => console.log('error', error));
+  } else {
+    var name = n.value;
+    console.log(name);
     fetch("https://digimoncard.io/api-public/search.php?n=" + name + "&color=" + color.value + "&type=" + type.value, requestOptions)
       .then(response => response.json())
       .then(result => {
@@ -59,6 +59,8 @@ formu.addEventListener("submit", e => {
       })
       .catch(error => console.log('error', error));
   }
+
+}
 )
 pintarCard = result => {
   card.innerHTML = " ";
