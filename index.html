@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="div1 ml-5 mt-3">
+    <h1 class="text-info">Digimon</h1>
+    <form id="formulario">
+      <label for="nombre">Nombre:</label>
+      <input class="mb-3 nombre" type="text" name="nombre" id="nombre">
+      <br>
+      <label for="color">Color:</label>
+      <select class="mb-3 ml-2 color" name="color" id="color">
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Colorless">Colorless</option>
+        <option value="Green">Green</option>
+        <option value="Purple">Purple</option>
+        <option value="Red">Red</option>
+        <option value="White">White</option>
+        <option value="Yellow">Yellow</option>
+      </select>
+      <br>
+      <label for="type">Tipo</label>
+      <select class="mb-3 ml-2 type" name="type" id="type">
+        <option value="Digimon">Digimon</option>
+        <option value="Option">Option</option>
+        <option value="Tamer">Tamer</option>
+        <option value="Digi-Egg">Digi-Egg</option>
+      </select>
+      <br>
+      <button class="boton" id="enviar" type="submit">Buscar</button>
+    </form>
+
+  </div>
+  <div id="card" class="row mt-2">
+  </div>
+  <template id="oculto">
+    <div>
+      <div class="card">
+        <img src="" id="img" class="card-img-top imagen" alt="#">
+        <div class="card-body">
+          <h3 class="card-title" id="nombre"></h3>
+          <h4>Tipo:<h4 id="tipo"></h4>
+          </h4>
+          <h6>Color: <h6 id="colors"></h6>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

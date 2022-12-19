@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+.boton {
+  background-color: #000000;
+  color: white;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+.resultado{
+  width: 100%;
+}
+.div1{
+  width: 100%;
+}
+.nombre{
+  width: 26.5%;
+}
